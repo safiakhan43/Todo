@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A cute pastel planner: todos, notes, calendar and an analog clock — all in your browser.">
+  <title>My  Planner </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#todo-section">Skip to my tasks</a>
+
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-title">
+        <h1>My  Planner </h1>
+        <p class="today-date" id="today-date">Loading today… </p>
+      </div>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          id="theme-toggle"
+          class="icon-button"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+          title="Toggle dark mode">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+
+        <section id="clock-section" class="clock-card" aria-label="Current time">
+          <canvas id="clock" width="180" height="180" role="img" aria-label="Analog clock showing the current time"></canvas>
+          <p class="clock-digital" id="clock-digital">--:--:--</p>
+        </section>
+      </div>
+    </header>
+
+    <main class="app-grid">
+      <!-- ===================== TODO ===================== -->
+      <section id="todo-section" class="card" aria-labelledby="todo-heading">
+        <h2 id="todo-heading">My Tasks </h2>
+
+        <p class="quote" id="motivation-quote" aria-live="polite">You are doing great! </p>
+
+        <form class="todo-form" id="todo-form" autocomplete="off">
+          <label class="visually-hidden" for="todo-input">New task</label>
+          <input
+            type="text"
+            id="todo-input"
+            name="todo"
+            placeholder="What shall we do today? "
+            maxlength="140"
+            required>
+          <button type="submit" class="btn btn-primary" id="add-todo-btn">Add </button>
+        </form>
+
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="active" aria-pressed="false">Active </button>
+          <button type="button" class="filter-btn" data-filter="done" aria-pressed="false">Done </button>
+        </div>
+
+        <ul id="todo-list" class="todo-list"></ul>
+
+        <p class="empty-state" id="todo-empty" hidden>Nothing here yet — add your first task! 🌷</p>
+
+        <div class="todo-footer">
+          <span id="todo-count" class="todo-count">0 tasks</span>
+          <button type="button" class="btn btn-ghost" id="clear-done-btn" title="Remove all completed tasks">Clear done 🗑️</button>
+        </div>
+      </section>
+
+      <!-- ===================== NOTES ===================== -->
+      <section id="notes-section" class="card" aria-labelledby="notes-heading">
+        <h2 id="notes-heading">Notes </h2>
+
+        <label class="visually-hidden" for="notes">Your notes</label>
+        <textarea
+          id="notes"
+          placeholder="Jot down anything sweet… "
+          spellcheck="true"></textarea>
+
+        <div class="notes-footer">
+          <span class="save-hint" id="notes-status" aria-live="polite">Saved automatically 💾</span>
+          <button type="button" class="btn btn-ghost" id="clear-notes-btn">Clear 🗑️</button>
+        </div>
+      </section>
+
+      <!-- ===================== CALENDAR ===================== -->
+      <aside id="calendar-section" class="card" aria-labelledby="calendar-heading">
+        <div class="calendar-header">
+          <button type="button" class="icon-button" id="prev-month" aria-label="Previous month">‹</button>
+          <h2 id="calendar-heading" aria-live="polite">Calendar </h2>
+          <button type="button" class="icon-button" id="next-month" aria-label="Next month">›</button>
+        </div>
+
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+
+        <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Month calendar"></div>
+
+        <div class="calendar-footer">
+          <button type="button" class="btn btn-ghost" id="today-btn">Jump to today </button>
+          <p class="calendar-legend"><span class="dot-legend" aria-hidden="true"></span> pending tasks</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="app-footer">
+      <p>Made with  — everything is saved right in your browser.</p>
+    </footer>
+  </div>
+
+  <!-- Heart burst layer for task celebrations -->
+  <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+</body>
+</html>
