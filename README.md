@@ -3,6 +3,17 @@
 A cute, pastel-themed personal planner that runs entirely in the browser. No frameworks,
 no build step, no external libraries (only Google Fonts). Just open `index.html` and it works.
 
+
+
+
+
+
+
+
+<img width="1346" height="643" alt="Plannerss" src="https://github.com/user-attachments/assets/a059cedc-419f-491f-8741-af63f7c35743" />
+
+
+
 ##  Project structure
 
 ```
