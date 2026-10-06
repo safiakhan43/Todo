@@ -98,7 +98,7 @@ Typography is **Quicksand** from Google Fonts (with `Comic Neue` and system fall
 
 Motion is reduced automatically under `prefers-reduced-motion: reduce`.
 
-## 🔗 Functional entry points
+##  Functional entry points
 
 | Path / element | Purpose |
 | --- | --- |
