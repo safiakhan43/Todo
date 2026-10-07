@@ -1,7 +1,7 @@
 # My Cute Planner 
 
 A cute, pastel-themed personal planner that runs entirely in the browser. No frameworks,
-no build step, no external libraries (only Google Fonts). Just open `index.html` and it works.
+no build step, no external libraries (only Google Fonts). Just open `index.html` and the file works.
 
 
 
@@ -33,7 +33,7 @@ project-folder/
 
 ##  Currently completed features
 
-1. **Header** — app title "My Cute Planner 🌸" plus today's full date (`#today-date`),
+1. **Header** — app title "My Cute Planner " plus today's full date (`#today-date`),
    rendered with `toLocaleDateString`.
 2. **Todo list** (`#todo-section`)
    - Add tasks with the **Add ** button **or the Enter key** via a `<form>` submit.
@@ -113,7 +113,7 @@ Motion is reduced automatically under `prefers-reduced-motion: reduce`.
 
 There is no routing, no query parameters and no backend — state lives in `localStorage`.
 
-## 🗄️ Data models & storage
+##  Data models & storage
 
 Plain `localStorage` key/value pairs; JSON-encoded where structured.
 
@@ -128,7 +128,7 @@ Dates are always derived in **local time** (a `YYYY-MM-DD` key built by hand rat
 
 No external services, APIs, databases or authentication are used.
 
-## 🚧 Not yet implemented / known limits
+## Not yet implemented / known limits
 
 - Tasks have no due date, time, priority or categories — the calendar dot only reflects
   the day a task was **created**.
@@ -138,7 +138,7 @@ No external services, APIs, databases or authentication are used.
   browser data is cleared or private/incognito mode is closed.
 - Notes are plain text only (no Markdown rendering or lists).
 
-## 💡 Recommended next steps
+##  Recommended next steps
 
 1. Add a due-date field per task and dot the calendar by due date instead of creation date.
 2. Inline editing (double-click a task to rename it) and drag-and-drop reordering.
@@ -148,7 +148,7 @@ No external services, APIs, databases or authentication are used.
 6. Replace `innerHTML`-free rendering with a small diffing step if the list grows
    (currently the list is re-rendered on every change, which is fine at planner scale).
 
-## 🚀 Running it
+## Running it
 
 Open `index.html` locally — double-clicking the file works. To serve it over HTTP instead:
 
