@@ -18,7 +18,7 @@ no build step, no external libraries (only Google Fonts). Just open `index.html`
 
 ```
 project-folder/
-├── index.html      # semantic structure only
+├── index.html      # semantic structure 
 ├── style.css       # all styling (CSS variables, grid, responsive)
 ├── script.js       # all logic (todos, notes, calendar, clock, storage)
 └── README.md
@@ -37,7 +37,7 @@ project-folder/
    rendered with `toLocaleDateString`.
 2. **Todo list** (`#todo-section`)
    - Add tasks with the **Add ** button **or the Enter key** via a `<form>` submit.
-   - Each task has a custom circular checkbox (shows **❤️** when checked), the text
+   - Each task has a custom circular checkbox (shows when checked), the text
      (strikethrough when done) and a **** delete button.
    - Filters: **All / Active / Done ** with `aria-pressed` state.
    - Live counter ("3 tasks · 2 left") and a **Clear done ** button (auto-disabled
