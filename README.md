@@ -1,7 +1,7 @@
 # My Cute Planner 
 
 A cute, pastel-themed personal planner that runs entirely in the browser. No frameworks,
-no build step, no external libraries (only Google Fonts). Just open `index.html` and the file works.
+no build step, no external libraries ( Google Fonts).  open `index.html` and the file works.
 
 
 
@@ -43,7 +43,7 @@ project-folder/
    - Live counter ("3 tasks · 2 left") and a **Clear done ** button (auto-disabled
      when nothing is completed).
    - **Undo toast** after a delete (5 second window).
-   - Empty-state message that adapts to the active filter.
+   - Empty state message that adapts to the active filter.
 3. **Notes** (`#notes-section`)
    - `<textarea id="notes">` auto-saves on every `input` event ("Saving… " →
      "Saved automatically ") and is restored on load.
